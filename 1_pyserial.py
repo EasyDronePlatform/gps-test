@@ -8,7 +8,7 @@ def signal_handle( sig, frame ):
             json.dump( ARY, outfile )
     exit(0)
 
-ser = serial.Serial( '/dev/ttyUSB0', 4800 )
+ser = serial.Serial( '/dev/ttyUSB1', 9600 )
 ARY =  collections.OrderedDict() # To save the data for reference
 import signal
 signal.signal( signal.SIGINT, signal_handle )
